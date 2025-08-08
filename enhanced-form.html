@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enhanced-form.html</title>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced Form Submission</h1>
+    <p>This page demonstrates advanced HTML5 content and form creation with semantic structure, accessibility, and built-in validation.</p>
+</header>
+
+<main>
+
+    <!-- Lists Section -->
+    <section>
+        <h2>Before You Begin</h2>
+        <p>Please ensure you have the following ready:</p>
+        <ul>
+            <li>Valid Email Address</li>
+            <li>Active Phone Number</li>
+            <li>Profile Photo (JPEG/PNG)</li>
+            <li>Preferred Contact Method
+                <ul>
+                    <li>Email</li>
+                    <li>Phone</li>
+                    <li>WhatsApp</li>
+                </ul>
+            </li>
+            <li>Selected Course of Interest
+                <ul>
+                    <li>Web Development</li>
+                    <li>Data Science</li>
+                    <li>Cybersecurity</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>Available Courses</h2>
+        <table border="1" cellpadding="5">
+            <caption>Our Training Programs</caption>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Duration</th>
+                    <th>Mode</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Web Development</td>
+                    <td>6 Months</td>
+                    <td>Online</td>
+                </tr>
+                <tr>
+                    <td>Data Science</td>
+                    <td>8 Months</td>
+                    <td>Hybrid</td>
+                </tr>
+                <tr>
+                    <td>Cybersecurity</td>
+                    <td>5 Months</td>
+                    <td>On-Campus</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>Explore Our Campus</h2>
+        <img src="Assets/Campus.jpg" alt="Campus Image" width="400">
+        <p>Listen to our welcome message:</p>
+        <audio controls>
+            <source src="Assets/welcome.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p>Watch our introduction video:</p>
+        <video controls width="320">
+            <source src="Assets/school.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+        <h2>Student Registration Form</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3"><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email" required><br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="^\+?\d{10,15}$" required><br><br>
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required><br><br>
+
+                <label for="username">Assigned Username (Read-only):</label><br>
+                <input type="text" id="username" name="username" value="GeneratedUser123" readonly><br><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Selection</legend>
+
+                <label for="course">Choose a Course:</label><br>
+                <select id="course" name="course" required>
+                    <option value="">--Select--</option>
+                    <option value="web">Web Development</option>
+                    <option value="data">Data Science</option>
+                    <option value="cyber">Cybersecurity</option>
+                </select><br><br>
+
+                <label for="photo">Upload Profile Photo:</label><br>
+                <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+                <label for="experience">Years of Experience:</label><br>
+                <input type="number" id="experience" name="experience" min="0" max="50" required><br><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Details</legend>
+
+                <label for="message">Additional Message:</label><br>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea><br><br>
+
+                <label>Preferred Contact Method:</label><br>
+                <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                <label for="contact-email">Email</label>
+                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                <label for="contact-phone">Phone</label><br><br>
+
+                <label>
+                    <input type="checkbox" name="terms" required> I agree to the terms and conditions
+                </label><br><br>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced Form Example</p>
+</footer>
+
+</body>
+</html>
